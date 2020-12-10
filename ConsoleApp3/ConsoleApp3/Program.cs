@@ -10,40 +10,44 @@ namespace ConsoleApp3
             - расширение файла
             - имя файла
             - путь где должен создаться файл*/
+
+            /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
             Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
             string inputFormat = Console.ReadLine();
-                      
-                switch (inputFormat)
+            while (true)
+            {
+                if (inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")
                 {
-                    case "txt":
-                        Console.WriteLine("Ожидание загрузки...");
-                        System.Threading.Thread.Sleep(500);
-                        ClassTXT example = new ClassTXT();
-                        example.CreateFile("a");                        
-                        break;
-                    case "xlsx":
-                        Console.WriteLine("Ожидание загрузки...");
-                        System.Threading.Thread.Sleep(500);
-                        ClassXLSX example2 = new ClassXLSX();
-                        example2.CreateFile("a");                        
-                        break;
-                    case "png":
-                        Console.WriteLine("Ожидание загрузки...");
-                        System.Threading.Thread.Sleep(500);
-                        ClassPNG example3 = new ClassPNG();
-                        example3.CreateFile("a");                        
-                        break;                    
-                    default:
-                        while (inputFormat != "txt" || inputFormat != "xlsx" || inputFormat != "png")
-                        {
-                            Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
-                            
-                        }
-                        break;
-                    
+                    switch (inputFormat)
+                    {
+                        case "txt":
+                            Console.WriteLine("Ожидание загрузки...");                            
+                            ClassTXT example = new ClassTXT();
+                            example.CreateFile();
+                            break;
+                        case "xlsx":
+                            Console.WriteLine("Ожидание загрузки...");                            
+                            ClassXLSX example2 = new ClassXLSX();
+                            example2.CreateFile();
+                            break;
+                        case "png":
+                            Console.WriteLine("Ожидание загрузки...");                            
+                            ClassPNG example3 = new ClassPNG();
+                            example3.CreateFile();
+                            break;
+                    }
+                }
+                else 
+                {
+                    Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
 
-            Console.Clear();
+
+            }
+
+            
             Console.WriteLine("Введите имя файла: ");
             string inputName = Console.ReadLine();
             Console.WriteLine("Введите путь к файлу: ");
@@ -52,28 +56,12 @@ namespace ConsoleApp3
 
             /*if (inputFormat=="exit")
                 Console.WriteLine("Выход из консоли");*/
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".");
-            System.Threading.Thread.Sleep(440);
-            Console.Write(".\n");          
-
+            
             Console.WriteLine("\nВаш файл "+ inputName+"."+inputFormat+" сохранён по адресу "+ inputWay);
             string final = Console.ReadLine();
+            Console.ReadKey();
 
-            while (final != "exit")
-            {
-                Console.ReadKey();
-            }
+            
         }
     }
 }

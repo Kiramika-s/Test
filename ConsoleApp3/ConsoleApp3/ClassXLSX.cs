@@ -6,7 +6,7 @@ namespace ConsoleApp3
 {
     public class ClassXLSX : FileCreator
     {
-        public void CreateFile(string format)
+        public void CreateFile()
         {
             Console.WriteLine("Логика создания файла XLSX");
         }

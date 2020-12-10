@@ -6,7 +6,7 @@ namespace ConsoleApp3
 {
     public class ClassTXT : FileCreator
     {
-        public void CreateFile(string userInput)
+        public void CreateFile()
         {
       
             Console.WriteLine("Логика создания файла TXT");
