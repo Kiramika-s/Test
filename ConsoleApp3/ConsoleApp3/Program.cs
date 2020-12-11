@@ -13,11 +13,14 @@ namespace ConsoleApp3
             - путь где должен создаться файл*/
 
             /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
-            Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
-            string inputFormat = Console.ReadLine();
+           
+           
             FileCreator fc;
             while (true)
             {
+                Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
+                string inputFormat = Console.ReadLine();
+
                 if (inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")
                 {
                     switch (inputFormat)
@@ -37,33 +40,32 @@ namespace ConsoleApp3
                             break;
                     }
                 }
-                else if(inputFormat=="exit")
-                    Environment.Exit(0);
                 else 
-                {
                     Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
+                /*else 
+                {
+                    
                     Console.ReadKey();
                     Console.Clear();
-                }
-                break;
+                }*/
+                Console.WriteLine("Введите имя файла: ");
+                string inputName = Console.ReadLine();
+                Console.WriteLine("Введите путь к файлу: ");
+                string inputWay = Console.ReadLine();
+                Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputWay);
+                Console.ReadKey();
+
+                if (inputFormat == "exit")
+                    Environment.Exit(0);
                 
-
-
             }
 
-            
-            Console.WriteLine("Введите имя файла: ");
-            string inputName = Console.ReadLine();
-            Console.WriteLine("Введите путь к файлу: ");
-            string inputWay = Console.ReadLine();            
-            Console.Clear();
-
+                   
 
             /*if (inputFormat=="exit")
                 Console.WriteLine("Выход из консоли");*/
             
-            Console.WriteLine("\nВаш файл "+ inputName+"."+inputFormat+" сохранён по адресу "+ inputWay);            
-            Console.ReadKey();
+            
 
 
             Console.WriteLine("Повторить? y/n");
