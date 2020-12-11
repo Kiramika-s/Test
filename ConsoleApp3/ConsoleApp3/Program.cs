@@ -4,6 +4,7 @@ namespace ConsoleApp3
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             /*Пользователь по порядку вводит три параметра:
@@ -14,6 +15,7 @@ namespace ConsoleApp3
             /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
             Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
             string inputFormat = Console.ReadLine();
+            FileCreator fc;
             while (true)
             {
                 if (inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")
@@ -22,18 +24,15 @@ namespace ConsoleApp3
                     {
                         case "txt":
                             Console.WriteLine("Ожидание загрузки...");                            
-                            ClassTXT example = new ClassTXT();
-                            example.CreateFile();
+                            fc = new ClassTXT();                            
                             break;
                         case "xlsx":
                             Console.WriteLine("Ожидание загрузки...");                            
-                            ClassXLSX example2 = new ClassXLSX();
-                            example2.CreateFile();
+                            fc = new ClassXLSX();                            
                             break;
                         case "png":
                             Console.WriteLine("Ожидание загрузки...");                            
-                            ClassPNG example3 = new ClassPNG();
-                            example3.CreateFile();
+                            fc = new ClassPNG();                            
                             break;
                     }
                 }
@@ -43,6 +42,7 @@ namespace ConsoleApp3
                     Console.ReadKey();
                     Console.Clear();
                 }
+                break;
 
 
             }
