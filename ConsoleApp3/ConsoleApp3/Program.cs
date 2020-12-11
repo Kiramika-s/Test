@@ -24,7 +24,8 @@ namespace ConsoleApp3
                     {
                         case "txt":
                             Console.WriteLine("Ожидание загрузки...");                            
-                            fc = new ClassTXT();                            
+                            fc = new ClassTXT();
+                            
                             break;
                         case "xlsx":
                             Console.WriteLine("Ожидание загрузки...");                            
@@ -36,6 +37,8 @@ namespace ConsoleApp3
                             break;
                     }
                 }
+                else if(inputFormat=="exit")
+                    Environment.Exit(0);
                 else 
                 {
                     Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
@@ -43,6 +46,7 @@ namespace ConsoleApp3
                     Console.Clear();
                 }
                 break;
+                
 
 
             }
@@ -54,14 +58,21 @@ namespace ConsoleApp3
             string inputWay = Console.ReadLine();            
             Console.Clear();
 
+
             /*if (inputFormat=="exit")
                 Console.WriteLine("Выход из консоли");*/
             
-            Console.WriteLine("\nВаш файл "+ inputName+"."+inputFormat+" сохранён по адресу "+ inputWay);
-            string final = Console.ReadLine();
+            Console.WriteLine("\nВаш файл "+ inputName+"."+inputFormat+" сохранён по адресу "+ inputWay);            
             Console.ReadKey();
 
-            
+
+            Console.WriteLine("Повторить? y/n");
+            if (Console.ReadKey(true).Key != ConsoleKey.Y)
+            {
+                Console.WriteLine("Пока");
+                Environment.Exit(0);
+            }
+
         }
     }
 }
