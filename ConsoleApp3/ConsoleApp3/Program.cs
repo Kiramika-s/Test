@@ -2,20 +2,16 @@
 
 namespace ConsoleApp3
 {
-    class Program
+    public class Program
     {
         
-        static void Main(string[] args)
-        {
-            /*Пользователь по порядку вводит три параметра:
-            - расширение файла
-            - имя файла
-            - путь где должен создаться файл*/
+        public static void Main(string[] args)
+        {            
 
             /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
            
            
-            FileCreator fc;
+            //FileCreator fc;
             while (true)
             {
                 Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
@@ -23,57 +19,53 @@ namespace ConsoleApp3
 
                 if (inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")
                 {
+                    Console.WriteLine("Введите имя файла: ");
+                    string inputName = Console.ReadLine();
+                    Console.WriteLine("Введите путь к файлу: ");
+                    string inputWay = Console.ReadLine();
+                    Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputWay);
+                    Console.ReadKey();
                     switch (inputFormat)
                     {
                         case "txt":
-                            Console.WriteLine("Ожидание загрузки...");                            
-                            fc = new ClassTXT();
-                            
+                            //Console.WriteLine("Ожидание загрузки...");
+                            ClassTXT example = new ClassTXT();
+                            example.CreateFile();
                             break;
-                        case "xlsx":
-                            Console.WriteLine("Ожидание загрузки...");                            
-                            fc = new ClassXLSX();                            
+                        case "xlsx":                            
+                            ClassXLSX example2 = new ClassXLSX();
+                            example2.CreateFile();
                             break;
-                        case "png":
-                            Console.WriteLine("Ожидание загрузки...");                            
-                            fc = new ClassPNG();                            
+                        case "png":                            
+                            ClassPNG example3 = new ClassPNG();
+                            example3.CreateFile();
                             break;
                     }
                 }
-                else 
-                    Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
-                /*else 
-                {
-                    
-                    Console.ReadKey();
-                    Console.Clear();
-                }*/
-                Console.WriteLine("Введите имя файла: ");
-                string inputName = Console.ReadLine();
-                Console.WriteLine("Введите путь к файлу: ");
-                string inputWay = Console.ReadLine();
-                Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputWay);
-                Console.ReadKey();
-
-                if (inputFormat == "exit")
+               
+                else if(inputFormat == "exit")
+                    {
                     Environment.Exit(0);
+                }
+                else
+                    {
+                    Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
+                }
+                
+                
                 
             }
 
-                   
-
-            /*if (inputFormat=="exit")
-                Console.WriteLine("Выход из консоли");*/
             
             
 
 
-            Console.WriteLine("Повторить? y/n");
+            /*Console.WriteLine("Повторить? y/n");
             if (Console.ReadKey(true).Key != ConsoleKey.Y)
             {
                 Console.WriteLine("Пока");
                 Environment.Exit(0);
-            }
+            }*/
 
         }
     }
