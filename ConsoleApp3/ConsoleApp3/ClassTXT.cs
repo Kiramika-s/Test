@@ -12,9 +12,6 @@ namespace ConsoleApp3
             Console.WriteLine("Логика создания файла TXT");
         }
 
-       /* public override void Test()
-        {
-            throw new NotImplementedException();
-        }*/
+    
     }
 }
