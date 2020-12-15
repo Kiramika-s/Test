@@ -11,7 +11,7 @@ namespace ConsoleApp3
             /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
            
            
-            FileCreator fc;
+            FileCreator fc = null;
             while (true)
             {
                 Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
@@ -22,30 +22,32 @@ namespace ConsoleApp3
                     Console.WriteLine("Введите имя файла: ");
                     string inputName = Console.ReadLine();
                     Console.WriteLine("Введите путь к файлу: ");
-                    string inputPass = Console.ReadLine();
-                    Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputPass);
-                    Console.ReadKey();
+                    string inputPath = Console.ReadLine();
+                                        
                     switch (inputFormat)
                     {
                         case "txt":
                             //Console.WriteLine("Ожидание загрузки...");
-                            fc = new TXTFileCreator();                            
+                            fc = new TXTFileCreator(inputFormat,inputName,inputPath);                            
                             break;
                         case "xlsx":                            
-                            fc = new PNGFileCreator();                            
+                            fc = new PNGFileCreator(inputFormat, inputName, inputPath);                            
                             break;
                         case "png":                            
-                            fc = new XLSXFileCreator();                            
+                            fc = new XLSXFileCreator(inputFormat, inputName, inputPath);                            
                             break;
                     }
+
+                    if (fc != null)
+                        fc.CreateFile();
                 }
                
                 else if(inputFormat == "exit")
-                    {
+                {
                     Environment.Exit(0);
                 }
                 else
-                    {
+                {
                     Console.WriteLine("Вы ввели некорректное расширение, повторите попытку");
                 }
                 

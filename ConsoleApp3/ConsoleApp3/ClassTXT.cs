@@ -6,13 +6,16 @@ namespace ConsoleApp3
 {
     public class TXTFileCreator : FileCreator
     {
-
+        //base отослал к FileCreator
+        public TXTFileCreator (string extention, string name, string path):base(extention,name,path)
+        {
+//на этот момент свойства уже имеют значения
+        }
         public override void CreateFile()
         {
-            Extention = Console.ReadLine();
             string FileCreationProcess = "Логика создания файла TXT";
             Console.WriteLine(FileCreationProcess);
-            Console.WriteLine("\nВаш файл " + Name + "." + Extention + " сохранён по адресу " + Pass);
+            base.OutputData();
         }
 
     

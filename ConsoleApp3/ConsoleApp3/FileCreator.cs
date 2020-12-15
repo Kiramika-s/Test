@@ -6,14 +6,24 @@ namespace ConsoleApp3
 {
     public abstract class FileCreator
     {
-            public string Extention { get; set; }
-            public string Name { get; set; }
-            public string Pass { get; set; }
+        public FileCreator(string extention, string name, string path)
+        {
+            Extention = extention;
+            Name = name;
+            Path = path;
+        }
+
+        public string Extention { get; set; }
+        public string Name { get; set; }
+        public string Path { get; set; }
 
         public abstract void CreateFile();
-        
-       
 
+
+        public void OutputData()
+        {
+            Console.WriteLine("\nВаш файл " + Name + "." + Extention + " сохранён по адресу " + Path);
+        }
         
     }
 }
