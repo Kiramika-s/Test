@@ -9,7 +9,7 @@ namespace ConsoleApp3
         //base отослал к FileCreator
         public TXTFileCreator (string extention, string name, string path):base(extention,name,path)
         {
-//на этот момент свойства уже имеют значения
+        //на этот момент свойства уже имеют значения
         }
         public override void CreateFile()
         {
