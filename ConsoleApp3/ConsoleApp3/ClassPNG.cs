@@ -4,11 +4,12 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    public class ClassPNG : FileCreator
+    public class PNGFileCreator : FileCreator
     {
-        public void CreateFile()
+        public void CreateFile(string fileCreationProcess)
         {
-            Console.WriteLine("Логика создания файла PNG");
+            string FileCreationProcess = "Логика создания файла PNG";
+            Console.WriteLine(FileCreationProcess);
         }
     }
 }

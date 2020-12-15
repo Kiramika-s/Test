@@ -11,7 +11,7 @@ namespace ConsoleApp3
             /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
            
            
-            //FileCreator fc;
+            FileCreator fc;
             while (true)
             {
                 Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
@@ -22,23 +22,20 @@ namespace ConsoleApp3
                     Console.WriteLine("Введите имя файла: ");
                     string inputName = Console.ReadLine();
                     Console.WriteLine("Введите путь к файлу: ");
-                    string inputWay = Console.ReadLine();
-                    Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputWay);
+                    string inputPass = Console.ReadLine();
+                    Console.WriteLine("\nВаш файл " + inputName + "." + inputFormat + " сохранён по адресу " + inputPass);
                     Console.ReadKey();
                     switch (inputFormat)
                     {
                         case "txt":
                             //Console.WriteLine("Ожидание загрузки...");
-                            ClassTXT example = new ClassTXT();
-                            example.CreateFile();
+                            fc = new TXTFileCreator();                            
                             break;
                         case "xlsx":                            
-                            ClassXLSX example2 = new ClassXLSX();
-                            example2.CreateFile();
+                            fc = new PNGFileCreator();                            
                             break;
                         case "png":                            
-                            ClassPNG example3 = new ClassPNG();
-                            example3.CreateFile();
+                            fc = new XLSXFileCreator();                            
                             break;
                     }
                 }

@@ -4,12 +4,15 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    public class ClassTXT : FileCreator
+    public class TXTFileCreator : FileCreator
     {
-        public void CreateFile()
+
+        public void CreateFile(string fileCreationProcess)
         {
-      
-            Console.WriteLine("Логика создания файла TXT");
+            Console.ReadLine();
+            string FileCreationProcess = "Логика создания файла TXT";
+            Console.WriteLine(FileCreationProcess);
+            Console.WriteLine("\nВаш файл " + Name + "." + inputFormat + " сохранён по адресу " + inputPass);
         }
 
     

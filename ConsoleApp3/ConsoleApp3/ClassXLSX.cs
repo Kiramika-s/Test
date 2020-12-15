@@ -4,11 +4,12 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    public class ClassXLSX : FileCreator
+    public class XLSXFileCreator : FileCreator
     {
-        public void CreateFile()
+        public void CreateFile(string fileCreationProcess)
         {
-            Console.WriteLine("Логика создания файла XLSX");
+            string FileCreationProcess = "Логика создания файла XLSX";
+            Console.WriteLine(FileCreationProcess);
         }
     }
 }
