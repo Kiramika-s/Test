@@ -7,12 +7,12 @@ namespace ConsoleApp3
     public class TXTFileCreator : FileCreator
     {
 
-        public void CreateFile(string fileCreationProcess)
+        public override void CreateFile()
         {
-            Console.ReadLine();
+            Extention = Console.ReadLine();
             string FileCreationProcess = "Логика создания файла TXT";
             Console.WriteLine(FileCreationProcess);
-            Console.WriteLine("\nВаш файл " + Name + "." + inputFormat + " сохранён по адресу " + inputPass);
+            Console.WriteLine("\nВаш файл " + Name + "." + Extention + " сохранён по адресу " + Pass);
         }
 
     

@@ -6,7 +6,7 @@ namespace ConsoleApp3
 {
     public class PNGFileCreator : FileCreator
     {
-        public void CreateFile(string fileCreationProcess)
+        public override void CreateFile()
         {
             string FileCreationProcess = "Логика создания файла PNG";
             Console.WriteLine(FileCreationProcess);
