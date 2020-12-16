@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-/*1. событие типа Action (без параметров)
-  2. событие типа Func<string, string>
-  3. событие типа delegate с одним текстовым параметром lastName
-  4. метод void (например Start(string lastName)), который принимает текстовый параметр lastName*/
-
 namespace ExerciseOnDelegates
 {
     public class Publisher
@@ -18,7 +13,19 @@ namespace ExerciseOnDelegates
         
         public void Start(string lastName)
         {
-            
+            if (lastName == null)
+            {
+                EventAction.Invoke();
+            }
+            else if (lastName == "Палпатин")
+            {
+                Console.WriteLine(EventFunc.Invoke(lastName));                
+            }
+            else
+            {
+                EventOneParametr.Invoke(lastName);
+            }
         }
+
     }
 }
