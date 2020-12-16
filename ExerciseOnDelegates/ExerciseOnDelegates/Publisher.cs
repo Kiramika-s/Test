@@ -9,23 +9,16 @@ using System.Text;
 
 namespace ExerciseOnDelegates
 {
-    public event Action action = null;
-    public event Func <string,string> fg;
-    public delegate void bvz (string lastName);
-    public event bvz NameEvent = lastName;
-    class Publisher
-    {
-        public void WithoutParametrs()
-        {
-
-        }
-        public void EventFunc()
-        {
-
-        }
+    public class Publisher
+    {        
+        public event Action EventAction;
+        public event Func <string,string> EventFunc;
+        public delegate void OneParametr(string lastName);
+        public event OneParametr EventOneParametr;
+        
         public void Start(string lastName)
         {
-            lastName = Console.ReadLine();
+            
         }
     }
 }

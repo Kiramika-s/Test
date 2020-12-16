@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.exe
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.deps.json
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.runtimeconfig.json
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.runtimeconfig.dev.json
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.dll
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\bin\Debug\netcoreapp3.1\ExerciseOnDelegates.pdb
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.AssemblyInfo.cs
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.dll
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.pdb
+C:\Users\User\Desktop\Git\Test\ExerciseOnDelegates\ExerciseOnDelegates\obj\Debug\netcoreapp3.1\ExerciseOnDelegates.genruntimeconfig.cache

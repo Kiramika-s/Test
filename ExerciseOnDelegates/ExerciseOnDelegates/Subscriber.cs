@@ -15,9 +15,10 @@ namespace ExerciseOnDelegates
         {
             Console.WriteLine("Привет инкогнито");
         }
-        public void LastName(string lastName)
+        public string LastName(string lastName)
         {            
             Console.WriteLine("Привет, " + lastName);
+            return null;
             
         }
         public void ReturnsString(string lastName)
