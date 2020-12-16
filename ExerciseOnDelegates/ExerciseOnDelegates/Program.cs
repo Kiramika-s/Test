@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 /*В классе Program метода Main необходимо создать два экземпляра данных классов
 И связать события (подписаться) Publisher'а с подходящими методами Subscriber'a
 
@@ -13,10 +11,12 @@ using System;
 Если в переменной inputText какой-то другой текст - тогда Start вызвать третье событие*/
 namespace ExerciseOnDelegates
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
+            OneParametr += Start;
             Subscriber EventTakoeto = new Subscriber();
 
             Publisher EventTakoeto2 = new Publisher();
@@ -25,18 +25,18 @@ namespace ExerciseOnDelegates
             EventTakoeto2.Start(inputText);
             if(inputText==null)
             {
-                Publisher.Action
+                Publisher.Action;
             }
             else if(inputText=="Палпатин")
             {
-                Publisher.Func<>
+                Publisher.Func<>;
 
             //зафиксировать то что вернуло событие и вывести это значение в консоль
 
             }
             else
             {
-                Publisher.NameEvent
+                Publisher.NameEvent;
             }
         }
     }
