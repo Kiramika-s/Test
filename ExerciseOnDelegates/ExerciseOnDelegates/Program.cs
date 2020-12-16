@@ -16,27 +16,29 @@ namespace ExerciseOnDelegates
 
         public static void Main(string[] args)
         {
-            OneParametr += Start;
             Subscriber EventTakoeto = new Subscriber();
-
             Publisher EventTakoeto2 = new Publisher();
+            EventTakoeto2.EventAction += EventTakoeto.WithoutParametrs;
+            EventTakoeto2.EventFunc += EventTakoeto.LastName;
+            EventTakoeto2.EventOneParametr += EventTakoeto.ReturnsString;
+
             Console.WriteLine("Введите вашу фамилию: ");
             string inputText = Console.ReadLine();
             EventTakoeto2.Start(inputText);
             if(inputText==null)
             {
-                Publisher.Action;
+                
             }
             else if(inputText=="Палпатин")
             {
-                Publisher.Func<>;
+                
 
             //зафиксировать то что вернуло событие и вывести это значение в консоль
 
             }
             else
             {
-                Publisher.NameEvent;
+                
             }
         }
     }
