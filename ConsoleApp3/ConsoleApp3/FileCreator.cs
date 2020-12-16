@@ -6,6 +6,7 @@ namespace ConsoleApp3
 {
     public abstract class FileCreator
     {
+        //Создание конструктора
         public FileCreator(string extention, string name, string path)
         {
             Extention = extention;

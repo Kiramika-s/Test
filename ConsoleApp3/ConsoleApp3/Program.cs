@@ -6,12 +6,10 @@ namespace ConsoleApp3
     {
         
         public static void Main(string[] args)
-        {            
-
-            /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/
-           
-           
-            FileCreator fc = null;
+        {
+            /*(inputFormat == "txt" || inputFormat == "xlsx" || inputFormat == "png")*/    
+            
+             FileCreator fc = null;
             while (true)
             {
                 Console.WriteLine("Введите расширение файла, который вы хотите загрузить: ");
