@@ -11,16 +11,14 @@ namespace ExerciseOnDelegates
             Console.WriteLine("Привет инкогнито");
         }
         public string LastName(string lastName)
-        {            
-            Console.WriteLine("Привет, " + lastName);
-            return null;
-            
+        {
+            Console.WriteLine("Здравствуйте, Верховный Ситх");
+            return "Моё уважение!";
         }
         public void ReturnsString(string lastName)
-        {            
-            Console.WriteLine("Здравствуйте, Верховный Ситх");
-            Console.WriteLine("Моё уважение!");
-            return;
+        {
+            Console.WriteLine("Привет " + lastName);
+            
         }
     }
 }
